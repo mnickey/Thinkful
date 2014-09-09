@@ -3,15 +3,15 @@
 
 class Wheels():
   def __init__(self, wheelWeight, wheelName, wheelCost):
-    self.wheelWeight = wheelWeight         # Have a weight
-    self.wheelName = wheelName             # Have a model name
+    self.wheelWeight = wheelWeight         # Have a weight -- not DRY
+    self.wheelName = wheelName             # Have a model name -- not DRY
     self.wheelCost = wheelCost             # Have a cost for manufacturer to produce
 
 class Frames():
   def __init__(self, frameMaterial, frameCost, frameWeight):
     self.frameMaterial = frameMaterial     # Can be made of aluminunum, carbon, or steel
-    self.frameCost = frameCost             # Have a cost for manufacturer to produce
-    self.frameWeight = frameWeight         # Have a weight
+    self.frameCost = frameCost             # Have a cost for manufacturer to produce -- not DRY
+    self.frameWeight = frameWeight         # Have a weight -- not DRY
 
 
 small = Wheels(10, "Tiny", 75.00)
