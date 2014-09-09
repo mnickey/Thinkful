@@ -13,6 +13,16 @@ class Frames():
     self.frameCost = frameCost             # Have a cost for manufacturer to produce -- not DRY
     self.frameWeight = frameWeight         # Have a weight -- not DRY
 
+class Models():
+	pass
+
+'''
+Comprised (in our simplified world) of two wheels of the same type and a frame.
+Have a total weight equal to the sum of the weight of the frame and two wheels.
+Have a total cost to produce (for our purposes, that cost is the sum of the two wheels' and frame's cost to produce)
+Have a name
+Have a manufactuer
+'''
 
 small = Wheels(10, "Tiny", 75.00)
 medium = Wheels(20, "Mid-sized", 150.00)
