@@ -1,3 +1,4 @@
+# BikePart - parent class for frame and wheels
 class BikePart(object):
 	def __init__(self, cost, weight):
 		self._cost = cost
@@ -25,27 +26,16 @@ class Frame(BikePart):
 
 # Create three frame types -- aluminunum, carbon & steel
 class Aluminunum(Frame):
-    pass
+	pass
 class Carbon(Frame):
-    pass
+	pass
 class Steel(Frame):
-    pass
+	pass
 
-"""
-Create two bicycle manufacturers, assume that all manufacturers use the same three frame types.
-Have a name, produce three models of bikes each, have a percentage over cost they sell bikes to bike shops at
-I created one manufacter class that can create multiple manufacturer objects
-"""
-class BikeManufacturer(object):
-    def __init__(self, name, model, percentage):
-        self._name = name
-        self._percentage = percentage
-class ModelA(BikeManufacturer):
-    pass
-class ModelB(BikeManufacturer):
-    pass
-class ModelC(BikeManufacturer):
-    pass
+class Material(object):
+	ALUMINUM = "Aluminum"
+	CARBON= "Carbon"
+	STEEL = "Steel"
 
 """
 Comprised (in our simplified world) of two wheels of the same type and a frame.
@@ -54,15 +44,66 @@ Have a total cost to produce (for our purposes, that cost is the sum of the two 
 Have a name
 Have a manufactuer
 """
+# Models have two wheels, a frame, a cost, a name and a manufacturer
+class Model(self):
+	def __init__(self, frame, frontWheel, backWheel):
+		self.frame = frame
+		self.frontWheel = frontWheel
+		self.backWheel = backWheel
 
+class ModelA(Model):
+	super(Model, self).__init__(self, frame, frontWheel, backWheel)
+	self.name = "Model A"
 
+class ModelB(Model):
+    super(Model, self).__init__(self, frame, frontWheel, backWheel)
+	self.name = "Model B"
 
+class ModelC(Model):
+    super(Model, self).__init__(self, frame, frontWheel, backWheel)
+	self.name = "Model C"
 
+"""
+Create two bicycle manufacturers, assume that all manufacturers use the same three frame types.
+Have a name, produce three models of bikes each, have a percentage over cost they sell to bike shops at
+I created one manufacter class that can create multiple manufacturer objects
+"""
+class BikeManufacturer(object):
+	def __init__(self, name, model, percentage):
+		self._name = name
+		self._percentage = .25
+		self.model = ["modelA", "asd2", "asd"]
 
+class Huffy(BikeManufacturer):
+	super(BikeManufacturer, self).__init__(self, name, model, percentage)
 
+class Trek(BikeManufacturer):
+	super(BikeManufacturer, self).__init__(self, name, model, percentage)
 
+"""
+Bike Shops:
+Get their inventory of bikes from manufacturers
+Sell bicycle models with a margin over price they pay to manufacturer
+Have a name
+Have an inventory
+Can see how much profit they have made on margin from selling bikes.
+"""
+class BikeShop(object):
+	def __init__(self, inventory, name, margin):
+		self.inventory = inventory
+		self.name = name
+		self.margin = .25
 
-
+"""
+Customers: Have a name, Have a fund of money to buy a bike, Can buy and own a new bicycle
+"""
+class Customers(object):
+	"""Customers: Have a name, Have a fund of money to buy a bike, Can buy and own a new bicycle"""
+	def __init__(self, name, funds, ownership):
+		super(Customers, self).__init__()
+		self.name = name
+		self.funds = funds
+		self.ownership = ownership
 
 """Test print items. Can be deleted or commented out when the class is complete."""
 small_wheel = Wheel("super small wheel", 10, 100)
