@@ -105,6 +105,10 @@ class Customers(object):
 		self.funds = funds
 		self.ownership = ownership
 
+
+
+
+
 """Test print items. Can be deleted or commented out when the class is complete."""
 small_wheel = Wheel("super small wheel", 10, 100)
 print "Your wheel is {0} and it costs {1} and it weighs {2}.".format(small_wheel._name, small_wheel._cost, small_wheel._weight)
