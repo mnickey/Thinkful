@@ -5,6 +5,7 @@ class Bicycle(object):
 		self.modelName = modelName
 		self.weight = weight
 		self.prodCost = prodCost
+		self.shopCost = prodCost * 1.20
 
 class BikeShops(object):
 	""" Bike Shops have a name, an inventory. 
@@ -17,11 +18,10 @@ class BikeShops(object):
 
 class Customers(object):
 	"""docstring for Customers"""
-	def __init__(self, Cust_name, Cust_funds):
+	def __init__(self, cust_name, cust_funds):
 		super(Customers, self).__init__()
-		self.Cust_name = Cust_name
-		self.Cust_funds = Cust_funds
-		
+		self.cust_name = cust_name
+		self.cust_funds = cust_funds
 		
 """
 The Scenario
