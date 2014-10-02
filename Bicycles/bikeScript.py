@@ -58,6 +58,18 @@ if __name__ == '__main__':
 		for b in range(len(inventory_list)):
 			if inventory_list[b].shopCost <= customer_list[i].cust_funds:
 				print "{0} ---- {1} --- {2}".format(customer_list[i].cust_name, inventory_list[b].modelName, inventory_list[b].shopCost)
+
+	print '\nPurchasing'
+	print '-' * 20
+	for cust in customer_list:
+	    for item in inventory_list:
+	        if item.shopCost <= cust.cust_funds:
+	            if item.soldFlag is False:
+	                inventory_list.remove(item)
+	                continue
+        if item.shopCost <= cust.cust_funds:
+            print "{0} ---- {1} --- {2}".format(cust.cust_name, item.modelName, item.shopCost)
+
 				# --- Pseudo Code ---
 				# find the first item that the customer can purchase and buy it -- conditional if statement
 				# if inventory_list[b].shopCost <= customer_list[i].cust_funds and inventory_list[b].soldFlag is False:
