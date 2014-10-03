@@ -6,7 +6,7 @@ class Bicycle(object):
 		self.weight = weight
 		self.prodCost = prodCost
 		self.shopCost = prodCost * 1.20
-		self.soldFlag = True
+		self.soldFlag = False
 
 class BikeShops(object):
 	""" Bike Shops have a name, an inventory. 

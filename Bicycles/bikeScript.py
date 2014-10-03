@@ -20,19 +20,18 @@ from bicycle_class import Bicycle, BikeShops, Customers
 if __name__ == '__main__':
 	""" Create 6 different bicycle models based on the imported Bicycle class """
 	inventory_list = []
-	inventory_list = [Bicycle("Roadster", 25, 150.00), \
-	Bicycle("Mountaineer", 50, 160), \
-	Bicycle("Horizontal Hipster", 75, 400), \
-	Bicycle("Speedster", 25, 290), \
-	Bicycle("Trail Blazer", 45, 425), \
+	inventory_list = [Bicycle("Roadster", 25, 150.00), 
+	Bicycle("Mountaineer", 50, 160), 
+	Bicycle("Horizontal Hipster", 75, 400), 
+	Bicycle("Speedster", 25, 290), 
+	Bicycle("Trail Blazer", 45, 425), 
 	Bicycle("Single Forever Sitdowner", 65, 650)]
 	
 	# Not using the BikeShops class -- need to implement and add into a shop using the BikeShop class
 	print "Inventory"
 	print "-" * 20
-	for i in range(len(inventory_list)):
-		print inventory_list[i].modelName, inventory_list[i].weight, \
-		inventory_list[i].prodCost, inventory_list[i].shopCost
+	for i in inventory_list:
+		print i.modelName, i.weight, i.prodCost, i.shopCost
 	
 	""" Create three customers. One customer has a budget of $200, the second $500, and the third $1000 """
 	customer_list = []
@@ -41,34 +40,34 @@ if __name__ == '__main__':
 	Customers("Christine", 200)]
 	print '\nCustomers'
 	print '-' * 20
-	for i in range(len(customer_list)):
-		print "{0} has {1} dollars for a new bike.".format(customer_list[i].cust_name, customer_list[i].cust_funds)
+	for i in customer_list:
+		print "{0} has {1} dollars for a new bike.".format(i.cust_name, i.cust_funds)
 
 	print '\nCustomers'
-	for i in range(len(customer_list)):
+	for i in customer_list:
 		print '-' * 20
-		for x in range(len(inventory_list)):
-			if inventory_list[x].prodCost < customer_list[i].cust_funds:
-				print "{0} can afford the {1}".format(customer_list[i].cust_name, inventory_list[x].modelName)
+		for x in inventory_list:
+			if x.prodCost < i.cust_funds:
+				print "{0} can afford the {1}".format(i.cust_name, x.modelName)
 	print '-' * 20
 
 	print '\nPurchasing'
 	print '-' * 20
-	for i in range(len(customer_list)):
-		for b in range(len(inventory_list)):
-			if inventory_list[b].shopCost <= customer_list[i].cust_funds:
-				print "{0} ---- {1} --- {2}".format(customer_list[i].cust_name, inventory_list[b].modelName, inventory_list[b].shopCost)
+	for i in customer_list:
+		for b in inventory_list:
+			if b.shopCost <= i.cust_funds:
+				print "{0} ---- {1} --- {2}".format(i.cust_name, b.modelName, b.shopCost)
 
 	print '\nPurchasing'
 	print '-' * 20
 	for cust in customer_list:
 	    for item in inventory_list:
-	        if item.shopCost <= cust.cust_funds:
-	            if item.soldFlag is False:
-	                inventory_list.remove(item)
-	                continue
-        if item.shopCost <= cust.cust_funds:
-            print "{0} ---- {1} --- {2}".format(cust.cust_name, item.modelName, item.shopCost)
+	        if item.shopCost <= cust.cust_funds and item.soldFlag == False:
+	            item.soldFlag = True
+	            cust.cust_funds -= item.shopCost
+	            print "{0} has purchased {1} bike.".format(cust.cust_name, item.modelName)
+                # inventory_list.remove(item)
+	            # continue -- redundant
 
 				# --- Pseudo Code ---
 				# find the first item that the customer can purchase and buy it -- conditional if statement
