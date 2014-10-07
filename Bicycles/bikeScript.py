@@ -24,7 +24,9 @@ if __name__ == '__main__':
 	
 	#Creating a bike shop
 	myStore = BikeShops("Mike's Bikes", inventory_list, customer_list)
-	print myStore.inventory_list[0].modelName
+	myStore.sell_bike(mike)
+	myStore.report()
+	# print myStore.inventory_list[0].modelName
 
 
 

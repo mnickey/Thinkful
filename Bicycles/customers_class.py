@@ -7,16 +7,17 @@ class Customers(object):
 		self.garage = []
 
 	# Method to see if the customer can buy a bike
-	def can_buy(self):
+	def can_buy(self, bike):
 		""" Returns true if the customers funds are greater than or equal to the bikes shop cost. """
 		return (self.cust_funds >= bike.shopCost)
 
-	def buy_bike(self, cost):
-		self.cust_funds -= cost 
+	def buy_bike(self, bike):
+		self.cust_funds -= bike.shopCost
+		return bike.shopCost 
 
 	def own_bike(self, bike):
 		self.garage.append(bike)
-		self.buy_bike(bike.shopCost)
+		self.buy_bike(bike)
 		return bike.shopCost
 
 """
