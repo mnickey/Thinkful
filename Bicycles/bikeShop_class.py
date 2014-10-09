@@ -13,16 +13,23 @@ class BikeShops(object):
 			if cust.can_buy(bike):
 				self.shop_balance += cust.buy_bike(bike)
 				cust.own_bike(bike)
-				print "{0} bought the {1} bike.".format(
+				bike.soldFlag = True
+				print "{0} bought the {1} bike from {2}.".format(
 					cust.cust_name, 
-					bike.modelName
+					bike.modelName,
+					self.shop_name
 				)
 				return
-		print "No bikes can be bought by {0}.".format(cust.cust_name)
+		print "\nNo bikes can be bought by {0}.".format(cust.cust_name)
 		return
 
 	def report(self):
-		print "The shop's current balance:", self.shop_balance
+		print "\n"
+		print "{0}".format(self.shop_name).center(70, '-')
+		print "{0} current store balance: {1}".format(
+			self.shop_name, 
+			self.shop_balance)
+		print "{0}".format(self.shop_name).center(70, '-')
 		return
 
 """
@@ -34,9 +41,3 @@ A bike shop sells bicycles with a margin over their cost
 A bike shop has a bank balance
 	*Secondary*
 """
-
-
-# *customer*		*shops*		*bikes*
-# *customer*		*shops*		*bikes*
-# *customer*		*shops*		*bikes*
-# *customer*		*shops*		*bikes*

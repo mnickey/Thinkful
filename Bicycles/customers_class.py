@@ -9,7 +9,7 @@ class Customers(object):
 	# Method to see if the customer can buy a bike
 	def can_buy(self, bike):
 		""" Returns true if the customers funds are greater than or equal to the bikes shop cost. """
-		return (self.cust_funds >= bike.shopCost)
+		return (self.cust_funds >= bike.shopCost) and not bike.soldFlag
 
 	def buy_bike(self, bike):
 		self.cust_funds -= bike.shopCost
