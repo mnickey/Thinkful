@@ -1,0 +1,105 @@
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'111233564941050967541414389063'), (u'oauth_timestamp', u'1414389063'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=111233564941050967541414389063&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389063&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D111233564941050967541414389063%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389063%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: hlzUGCuqlH1RQQe1C5RMn/9L/rw=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="111233564941050967541414389063", oauth_timestamp="1414389063", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="hlzUGCuqlH1RQQe1C5RMn%2F9L%2Frw%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8632
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'140761668734129422571414389451'), (u'oauth_timestamp', u'1414389451'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=140761668734129422571414389451&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389451&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D140761668734129422571414389451%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389451%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: QUygdo0NvFRwwInsJeY987y3QtY=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="140761668734129422571414389451", oauth_timestamp="1414389451", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="QUygdo0NvFRwwInsJeY987y3QtY%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8628
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'119488408802063593911414389473'), (u'oauth_timestamp', u'1414389473'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=119488408802063593911414389473&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389473&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D119488408802063593911414389473%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389473%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: cpGdObfPT8cQJ2oeY15XMC1ilxc=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="119488408802063593911414389473", oauth_timestamp="1414389473", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="cpGdObfPT8cQJ2oeY15XMC1ilxc%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8628
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'49817308120036119511414389481'), (u'oauth_timestamp', u'1414389481'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=49817308120036119511414389481&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389481&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D49817308120036119511414389481%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389481%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: b34LuNtc2G2BigipjnYZmeM7yAE=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="49817308120036119511414389481", oauth_timestamp="1414389481", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="b34LuNtc2G2BigipjnYZmeM7yAE%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8628
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'126206073733429090831414389531'), (u'oauth_timestamp', u'1414389531'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=126206073733429090831414389531&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389531&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D126206073733429090831414389531%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389531%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: nAPcRu9E2vGmFNNJafOR4eP0HuE=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="126206073733429090831414389531", oauth_timestamp="1414389531", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="nAPcRu9E2vGmFNNJafOR4eP0HuE%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8628
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'176487721863866781951414389604'), (u'oauth_timestamp', u'1414389604'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=176487721863866781951414389604&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389604&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D176487721863866781951414389604%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389604%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: W4UX2W851fzcCkrKuOAUgmeLK+g=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="176487721863866781951414389604", oauth_timestamp="1414389604", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="W4UX2W851fzcCkrKuOAUgmeLK%2Bg%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8828
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
+DEBUG:requests_oauthlib.oauth1_auth:Signing request <PreparedRequest [GET]> using client <Client nonce=None, signature_method=HMAC-SHA1, realm=None, encoding=utf-8, timestamp=None, resource_owner_secret=****, decoding=utf-8, verifier=None, signature_type=AUTH_HEADER, rsa_key=None, resource_owner_key=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb, client_secret=****, callback_uri=None, client_key=mqQMfMBR3HFbm7tpTbAEW7m7e>
+DEBUG:requests_oauthlib.oauth1_auth:Including body in call to sign: False
+DEBUG:oauthlib:Collected params: [(u'oauth_nonce', u'53881110722936488821414389616'), (u'oauth_timestamp', u'1414389616'), (u'oauth_consumer_key', u'mqQMfMBR3HFbm7tpTbAEW7m7e'), (u'oauth_signature_method', u'HMAC-SHA1'), (u'oauth_version', u'1.0'), (u'oauth_token', u'290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb')]
+DEBUG:oauthlib:Normalized params: oauth_consumer_key=mqQMfMBR3HFbm7tpTbAEW7m7e&oauth_nonce=53881110722936488821414389616&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1414389616&oauth_token=290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb&oauth_version=1.0
+DEBUG:oauthlib:Normalized URI: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:oauthlib:Base signing string: GET&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fhome_timeline.json&oauth_consumer_key%3DmqQMfMBR3HFbm7tpTbAEW7m7e%26oauth_nonce%3D53881110722936488821414389616%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1414389616%26oauth_token%3D290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb%26oauth_version%3D1.0
+DEBUG:oauthlib:Signature: qKP6w6a26gb9xE6+N4cAKz4MGJs=
+DEBUG:oauthlib:Encoding URI, headers and body to utf-8.
+DEBUG:requests_oauthlib.oauth1_auth:Updated url: https://api.twitter.com/1.1/statuses/home_timeline.json
+DEBUG:requests_oauthlib.oauth1_auth:Updated headers: {'Accept': '*/*', 'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Authorization': 'OAuth oauth_nonce="53881110722936488821414389616", oauth_timestamp="1414389616", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="mqQMfMBR3HFbm7tpTbAEW7m7e", oauth_token="290264105-IwgRVvawtMBGWoDOj24asoTnVEVjWjeFQvzKyDcb", oauth_signature="qKP6w6a26gb9xE6%2BN4cAKz4MGJs%3D"', 'User-Agent': 'python-requests/2.4.3 CPython/2.7.3 Darwin/14.0.0'}
+DEBUG:requests_oauthlib.oauth1_auth:Updated body: None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.twitter.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /1.1/statuses/home_timeline.json HTTP/1.1" 200 8828
+INFO:root:Creating Tweet Parser
+DEBUG:root:Creating Post Parser for Chirpy
