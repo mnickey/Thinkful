@@ -32,8 +32,8 @@ def main():
 	auth = authorization.authorize()
 	
 	# Uncomment these lines to show that the auth is actually there and working.
-	# response = requests.get(TIMELINE_URL, auth=auth)
-	# print json.dumps(response.json(), indent=4)
+	response = requests.get(TIMELINE_URL, auth=auth)
+	print json.dumps(response.json(), indent=4)
 
 	# Since we're already logged on at this point I can use the 
 	# argparser to read the positional arguments and execute
@@ -46,7 +46,11 @@ def main():
 	command = arguments.pop("command")
 
 	if command == "post":
-		print "This is the command named status", arguments
+		payload = arguments
+		r = requests.post(CHIRP_URL, params=payload)
+		print "URL: ", r.url
+		print "STATUS_CODE: ", r.status_code
+		print "TEXT: " + r.text
 
 if __name__ == '__main__':
 	main()
