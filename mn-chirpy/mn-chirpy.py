@@ -47,10 +47,12 @@ def main():
 
 	if command == "post":
 		payload = arguments
-		r = requests.post(CHIRP_URL, params=payload)
+		r = requests.post(CHIRP_URL, params=payload, auth=auth)
 		print "URL: ", r.url
 		print "STATUS_CODE: ", r.status_code
 		print "TEXT: " + r.text
+	else:
+		print "No post message to send a tweet"
 
 if __name__ == '__main__':
 	main()
