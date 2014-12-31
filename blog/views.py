@@ -48,8 +48,9 @@ def add_post_post():
     session.commit()
     return redirect(url_for("posts"))
 
-@app.route("/post/<int:id>", methods=["GET"])
-def view_post(id):
-    posts.id = id
-    return render_template("view_post.html",
-                           posts.id)
+@app.route("/post/<int:post_id>", methods=["GET"])
+def view_post(post_id):
+    posts = session.query(Post)
+    posts = posts.filter_by(Post.id == post_id)
+    posts = posts.all()
+    return render_template("view_post.html", posts=posts)
