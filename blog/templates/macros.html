@@ -11,7 +11,8 @@
     <div class="col-md-10">
         <h1>
             <!--Need to reform the URL to be proper-->
-            <a href="{{ url_for('posts'), post.id }}"> {{ post.title }} </a>
+            <!--<a href="{{ url_for('posts'), post.id }}"> {{ post.title }} </a>-->
+            <a href="/post/{{ post.id }}">{{ post.title }}</a>
         </h1>
         {{ post.content | safe }}
     </div>
