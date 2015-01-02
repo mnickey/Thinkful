@@ -72,3 +72,11 @@ def edit_post_post(post_id):
     session.commit()
     # return render_template("edit_post.html", post=post)\
     return redirect(url_for("posts"))
+
+@app.route("/post/<int:post_id>/delete", methods=["POST"])
+def delete_post(post_id):
+    post = session.query(Post)
+    post = post.get(post_id)
+    content = mistune.markdown(request.form["content"])
+    title = request.form["title"]
+    session.query(Post.filter(Post.id == post_id).delete())
