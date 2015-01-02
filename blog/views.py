@@ -20,7 +20,7 @@ def posts(page=1, paginate_by=10):
     has_prev = page_index > 0
 
     posts = session.query(Post)
-    posts = posts.order_by(Post.datetime.asc()) # change to desc for descending order
+    posts = posts.order_by(Post.datetime.desc()) # change to desc for descending order
     posts = posts[start:end]
 
     return render_template("posts.html",
