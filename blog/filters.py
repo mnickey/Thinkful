@@ -1,4 +1,5 @@
 from blog import app
+import mistune
 
 @app.template_filter()
 def dateformat(date, format):
