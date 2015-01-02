@@ -1,5 +1,6 @@
+{% import mistune %}
 {% macro render_post(post) %}
-import mistune
+
 <div class="row">
     <div class="col-md-2 text-right metadata">
         <ul class="list-unstyled">
@@ -15,7 +16,7 @@ import mistune
             <a href="/post/{{ post.id }}">{{ post.title }}</a>
         </h1>
 
-        {{ post.content | mistune_markdown | safe }}
+        {{ post.content | mistune.markdown | safe }}
         <div>
             <a href="/post/{{ post.id }}/edit"> Edit Post</a>
         </div>
