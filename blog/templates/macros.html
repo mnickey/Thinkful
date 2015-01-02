@@ -1,0 +1,23 @@
+{% macro render_post(post) %}
+<div class="row">
+    <div class="col-md-2 text-right metadata">
+        <ul class="list-unstyled">
+            <li>
+                {{ post.datetime | dateformat("%d/%m/%y") }}
+                {{ post.id }}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <h1>
+            <!--Need to reform the URL to be proper-->
+            <!--<a href="{{ url_for('posts'), post.id }}"> {{ post.title }} </a>-->
+            <a href="/post/{{ post.id }}">{{ post.title }}</a>
+        </h1>
+        {{ post.content | safe }}
+        <div>
+            <a href="/post/{{ post.id }}/edit"> Edit Post</a>
+        </div>
+    </div>
+</div>
+{% endmacro %}
