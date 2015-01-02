@@ -42,7 +42,8 @@ from flask import request, redirect, url_for
 def add_post_post():
     post = Post(
         title=request.form["title"],
-        content=mistune.markdown(request.form["content"]) )
+        #was content=mistune.markdown(request.form["content"]) ) but was seeing html tags in posts
+        content=request.form["content"])
     session.add(post)
     session.commit()
     return redirect(url_for("posts"))
@@ -66,7 +67,8 @@ def edit_post_post(post_id):
     post = post.get(post_id)
     # if there's a title post the new title AND If there's a content post the new content
     title=request.form["title"]
-    content=mistune.markdown(request.form["content"])
+    # was content=mistune.markdown(request.form["content"]) but was seeing html tags in editing
+    content=request.form["content"]
     session.query(Post).filter(Post.id == post_id).update(
          {"title":title, "content":content} )
     session.commit()
@@ -77,6 +79,7 @@ def edit_post_post(post_id):
 def delete_post(post_id):
     post = session.query(Post)
     post = post.get(post_id)
-    content = mistune.markdown(request.form["content"])
+    content = request.form["content"]
     title = request.form["title"]
     session.query(Post.filter(Post.id == post_id).delete())
+    session.commit()
