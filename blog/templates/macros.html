@@ -15,6 +15,9 @@
             <a href="/post/{{ post.id }}">{{ post.title }}</a>
         </h1>
         {{ post.content | safe }}
+        <div>
+            <a href="/post/{{ post.id }}/edit"> Edit Post</a>
+        </div>
     </div>
 </div>
 {% endmacro %}

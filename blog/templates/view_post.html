@@ -4,6 +4,7 @@
 
 {% for post in posts %}
 {{ macros.render_post(post) }}
+{{ post.content | safe }}
 {% endfor %}
 
 <ul>
