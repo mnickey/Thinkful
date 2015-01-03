@@ -20,7 +20,7 @@ def posts(page=1, paginate_by=10):
     has_prev = page_index > 0
 
     posts = session.query(Post)
-    posts = posts.order_by(Post.datetime.asc()) # change to desc for descending order
+    posts = posts.order_by(Post.datetime.desc()) # change to desc for descending order
     posts = posts[start:end]
 
     return render_template("posts.html",
@@ -42,7 +42,8 @@ from flask import request, redirect, url_for
 def add_post_post():
     post = Post(
         title=request.form["title"],
-        content=mistune.markdown(request.form["content"]) )
+        #was content=mistune.markdown(request.form["content"]) ) but was seeing html tags in posts
+        content=request.form["content"])
     session.add(post)
     session.commit()
     return redirect(url_for("posts"))
@@ -66,9 +67,24 @@ def edit_post_post(post_id):
     post = post.get(post_id)
     # if there's a title post the new title AND If there's a content post the new content
     title=request.form["title"]
-    content=mistune.markdown(request.form["content"])
+    # was content=mistune.markdown(request.form["content"]) but was seeing html tags in editing
+    content=request.form["content"]
     session.query(Post).filter(Post.id == post_id).update(
          {"title":title, "content":content} )
     session.commit()
     # return render_template("edit_post.html", post=post)\
+    return redirect(url_for("posts"))
+
+@app.route("/post/<int:post_id>/delete", methods=["GET"])
+def delete_get(post_id):
+    post = session.query(Post)
+    post = post.get(post_id)
+    return render_template("delete_post.html", post=post)
+
+@app.route("/post/<int:post_id>/delete", methods=["POST"])
+def delete_post(post_id):
+    post = session.query(Post)
+    post = post.get(post_id)
+    session.query(Post).filter(Post.id == post_id).delete(synchronize_session='evaluate')
+    session.commit()
     return redirect(url_for("posts"))

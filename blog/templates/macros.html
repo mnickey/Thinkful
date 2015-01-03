@@ -1,4 +1,5 @@
 {% macro render_post(post) %}
+
 <div class="row">
     <div class="col-md-2 text-right metadata">
         <ul class="list-unstyled">
@@ -10,13 +11,14 @@
     </div>
     <div class="col-md-10">
         <h1>
-            <!--Need to reform the URL to be proper-->
-            <!--<a href="{{ url_for('posts'), post.id }}"> {{ post.title }} </a>-->
+            <!--Reform the URL to be proper-->
             <a href="/post/{{ post.id }}">{{ post.title }}</a>
         </h1>
-        {{ post.content | safe }}
+
+        {{ post.content | markdown | safe }}
         <div>
-            <a href="/post/{{ post.id }}/edit"> Edit Post</a>
+            <a href="/post/{{ post.id }}/edit"> Edit Post</a> ||
+            <a href="/post/{{ post.id }}/delete"> Delete Post </a>
         </div>
     </div>
 </div>
