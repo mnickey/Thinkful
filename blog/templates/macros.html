@@ -17,7 +17,8 @@
 
         {{ post.content | markdown | safe }}
         <div>
-            <a href="/post/{{ post.id }}/edit"> Edit Post</a>
+            <a href="/post/{{ post.id }}/edit"> Edit Post</a> ||
+            <a href="/post/{{ post.id }}/delete"> Delete Post </a>
         </div>
     </div>
 </div>
