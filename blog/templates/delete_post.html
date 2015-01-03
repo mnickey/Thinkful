@@ -15,7 +15,7 @@
         <label for="content">Content</label>
         <textarea class="form-control" id="content" name="content" placeholder="Post content" rows="20" required >{{ post.content | safe }}</textarea>
     </div>
-    <button type="submit" class="btn btn-danger" color="RED">Delete This Post</button>
+    <button type="submit" class="btn btn-danger" >Delete This Post</button>
     <a href="{{ url_for('posts') }}" type="reset" class="btn btn-default">Cancel</a>
 </form>
 {% endblock %}
